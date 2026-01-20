@@ -30,8 +30,8 @@ export const StatusBar: React.FC<StatusBarProps> = ({ stats, coins, level }) => 
               {level}
             </div>
             <div className="flex flex-col">
-              <span className="text-xs uppercase font-bold tracking-wider opacity-70">Bloop</span>
-              <span className="text-sm font-bold">Lvl {level} Alien</span>
+              <span className="text-xs uppercase font-bold tracking-wider opacity-70">Nebula</span>
+              <span className="text-sm font-bold">Lvl {level} Cosmic Cat</span>
             </div>
           </div>
           

@@ -1,6 +1,6 @@
 {
-  "name": "Bloop's Cosmic World",
-  "description": "An original virtual pet game where you take care of Bloop, a cheeky alien blob. Feed, bathe, and talk to Bloop, who repeats everything you say in a funny voice!",
+  "name": "Nebula's Cosmic World",
+  "description": "An original virtual pet game where you take care of Nebula, a cheeky cosmic cat. Feed, bathe, and talk to Nebula, who repeats everything you say in a funny feline voice!",
   "requestFramePermissions": [
     "microphone"
   ]

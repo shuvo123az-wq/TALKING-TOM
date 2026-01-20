@@ -8,7 +8,7 @@ import { MiniGame } from './components/MiniGame';
 
 const App: React.FC = () => {
   const [gameState, setGameState] = useState<GameState>(() => {
-    const saved = localStorage.getItem('bloop_save');
+    const saved = localStorage.getItem('nebula_save');
     if (saved) return JSON.parse(saved);
     return {
       stats: INITIAL_STATS,
@@ -31,7 +31,7 @@ const App: React.FC = () => {
 
   // Persistence
   useEffect(() => {
-    localStorage.setItem('bloop_save', JSON.stringify(gameState));
+    localStorage.setItem('nebula_save', JSON.stringify(gameState));
   }, [gameState]);
 
   // Game Loop - Decay stats
@@ -105,9 +105,9 @@ const App: React.FC = () => {
 
   const repeatBack = (text: string) => {
     const utterance = new SpeechSynthesisUtterance(text);
-    // Bloop's high pitched alien voice
-    utterance.pitch = 2.0; 
-    utterance.rate = 1.2;
+    // Nebula's cat-like high pitched voice
+    utterance.pitch = 1.8; 
+    utterance.rate = 1.1;
     window.speechSynthesis.speak(utterance);
   };
 
@@ -174,7 +174,7 @@ const App: React.FC = () => {
           <div className="mt-8 bg-white/10 backdrop-blur px-6 py-2 rounded-full border border-white/20 animate-bounce cursor-pointer"
                onClick={startListening}>
             <span className="text-sm font-bold uppercase tracking-widest">
-              {isListening ? "Listening..." : "Tap Bloop to talk!"}
+              {isListening ? "Nebula is listening..." : "Tap Nebula to talk!"}
             </span>
           </div>
         )}
@@ -191,7 +191,7 @@ const App: React.FC = () => {
 
       {/* Menus */}
       {activeMenu === 'food' && (
-        <MenuOverlay title="Cosmic Kitchen" onClose={() => setActiveMenu('none')}>
+        <MenuOverlay title="Cosmic Pantry" onClose={() => setActiveMenu('none')}>
           <div className="grid grid-cols-2 gap-3">
             {FOOD_ITEMS.map(item => (
               <button key={item.id} 
@@ -208,7 +208,7 @@ const App: React.FC = () => {
       )}
 
       {activeMenu === 'store' && (
-        <MenuOverlay title="Alien Boutique" onClose={() => setActiveMenu('none')}>
+        <MenuOverlay title="Cat Boutique" onClose={() => setActiveMenu('none')}>
           <div className="grid grid-cols-1 gap-3">
             {HATS.map(item => (
               <button key={item.id} 
@@ -222,7 +222,7 @@ const App: React.FC = () => {
               </button>
             ))}
           </div>
-          <p className="text-center text-white/40 text-xs mt-4 italic">Accessories coming soon in the next nebula update!</p>
+          <p className="text-center text-white/40 text-xs mt-4 italic">Cat accessories coming soon in the next nebula update!</p>
         </MenuOverlay>
       )}
 
