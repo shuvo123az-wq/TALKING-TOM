@@ -1,0 +1,7 @@
+{
+  "name": "Bloop's Cosmic World",
+  "description": "An original virtual pet game where you take care of Bloop, a cheeky alien blob. Feed, bathe, and talk to Bloop, who repeats everything you say in a funny voice!",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
